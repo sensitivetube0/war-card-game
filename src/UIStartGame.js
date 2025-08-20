@@ -1,21 +1,18 @@
 import { game } from "./game.js";
+import { formValidate } from "./formValidate.js";
 let UI = (function () {
   let startButton = document.querySelector(".start");
   let gameStarted = false;
   let player1;
   let player2;
-  startButton.addEventListener("click", (e) => {
-    e.preventDefault();
+  startButton.addEventListener("click", () => {
+    // e.preventDefault();
     checkValues();
   });
   function checkValues() {
     let player1Input = document.querySelector("#player1").value;
     let player2Input = document.querySelector("#player2").value;
-    if (
-      player1Input.length !== 0 &&
-      player2Input.length !== 0 &&
-      gameStarted === false
-    ) {
+    if (formValidate() === true && gameStarted === false) {
       intialiseGame(player1Input, player2Input);
     } else if (gameStarted === true) {
       alert("game has already began");
@@ -35,10 +32,9 @@ let UI = (function () {
   }
 
   let startRoundButton = document.querySelector(".startR");
-  startRoundButton.addEventListener("click", (event) => {
-    event.preventDefault();
+  startRoundButton.addEventListener("click", () => {
+    // event.preventDefault();
     if (gameStarted === true) {
-      console.log("wa");
       startRound();
     } else {
       alert("please start game first");
