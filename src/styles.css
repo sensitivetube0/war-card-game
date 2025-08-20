@@ -1,48 +1,226 @@
-
 /* meyers reset
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+}
+:root {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+.boxes {
+  display: flex;
+  gap: 10vw;
+  justify-self: center;
+  align-items: center;
+  height: 40vh;
+}
+.box1 {
+  background-color: rgb(255, 235, 235);
+  height: 45vh;
+  width: 30vw;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-size: 1.9rem;
+}
+.box2 {
+  background-color: rgb(255, 235, 235);
+  height: 45vh;
+  width: 30vw;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-size: 1.9rem;
+}
+.vs {
+  font-size: 3rem;
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+.heading {
+  width: 100vw;
+  height: 25vh;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  font-size: 2.6rem;
+  background-color: rgb(98, 170, 170);
+  color: aliceblue;
+  flex-direction: column;
+  gap: 3vh;
+}
+.start {
+  width: 7vw;
+  height: 7vw;
+  border-radius: 20px;
+  font-size: 1rem;
+  background-color: aqua;
+}
+.form {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  height: 24vh;
+  justify-content: center;
+  align-items: center;
+  gap: 2vh;
+}
+#player1,
+#player2 {
+  width: 20vw;
+}
+.player1 {
+  display: flex;
+  flex-direction: column;
+}
+.player2 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3vh;
+}
+.player1Value {
+  font-size: 1.5rem;
+}
+.player2Value {
+  font-size: 1.5rem;
+  margin-bottom: 2vh;
+}
+.startR {
+  width: 20vw;
+  background-color: red;
+  margin-left: 7vw;
+  margin-top: 2vh;
+  width: 5vw;
+  height: 6vh;
 }
